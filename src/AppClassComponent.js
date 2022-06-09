@@ -45,7 +45,7 @@ class App extends React.Component {
         <h1>React Checkbox onChange Example</h1>
         <form onSubmit={this.handleSubmit}>
           {permissoes.map(([nome, chave]) => (
-            <>
+            <div key={chave}>
               <Checkbox
                 key={chave}
                 onChange={this.handleChange}
@@ -54,7 +54,7 @@ class App extends React.Component {
                 label={nome}
               />
               <br />
-            </>
+            </div>
           ))}
           <input type="submit" value="Submit" />
         </form>

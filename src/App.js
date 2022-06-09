@@ -43,16 +43,15 @@ const App = () => {
       <h1>React Checkbox onChange Example</h1>
       <form onSubmit={handleSubmit}>
         {permissoes.map(([nome, chave]) => (
-          <>
+          <div key={chave}>
             <Checkbox
-              key={chave}
               onChange={handleChange}
               name={chave}
               checked={permissions[chave]}
               label={nome}
             />
             <br />
-          </>
+          </div>
         ))}
         <input type="submit" value="Submit" />
       </form>
