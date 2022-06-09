@@ -47,6 +47,7 @@ class App extends React.Component {
           {permissoes.map(([nome, chave]) => (
             <>
               <Checkbox
+                key={chave}
                 onChange={this.handleChange}
                 name={chave}
                 checked={this.state[chave]}

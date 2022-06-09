@@ -45,6 +45,7 @@ const App = () => {
         {permissoes.map(([nome, chave]) => (
           <>
             <Checkbox
+              key={chave}
               onChange={handleChange}
               name={chave}
               checked={permissions[chave]}
